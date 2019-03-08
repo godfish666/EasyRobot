@@ -1,4 +1,6 @@
-from til.serial.COM import COM
+from til.serial.com import COM
+from til.serial.usb import UsbCOM
 
-c=COM()
-c.set_config()
+
+com = UsbCOM('COM3', 9600)
+com.send("asndsadnoisand")
