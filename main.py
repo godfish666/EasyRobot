@@ -1,6 +1,6 @@
-from til.serial.com import COM
-from til.serial.usb import UsbCOM
+
+from til.serial.usb import USB
 
 
-com = UsbCOM('COM3', 9600)
-com.send("asndsadnoisand")
+com = USB('COM3', 9600)
+com.send("10 11 12 34 3f")  # 十六进制数据包输出格式'10 11 12 34 3f'
