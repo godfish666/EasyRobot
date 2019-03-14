@@ -20,4 +20,4 @@ class UsbCOM(COM):
 
         except:
 
-            self.ser.close();
+            self.ser.close()
