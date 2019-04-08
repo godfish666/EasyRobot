@@ -64,22 +64,22 @@ class MotorDriver:
             GPIO.output(MotorDriver.D1, GPIO.LOW)
             GPIO.output(MotorDriver.D2, GPIO.HIGH)
 
-    def go_forward(self, t=0):
+    def go_forward(self, t):
         self.run_left_front_wheel(1)
         self.run_right_front_wheel(1)
         self.run_left_rear_wheel(1)
         self.run_right_rear_wheel(1)
-        if time != 0:
+        if t !=0:
             time.sleep(t)
             self.stop()
         pass
 
-    def backward(self, t=0):
+    def backward(self, t):
         self.run_left_front_wheel(0)
         self.run_right_front_wheel(0)
         self.run_left_rear_wheel(0)
         self.run_right_rear_wheel(0)
-        if time != 0:
+        if t != 0:
             time.sleep(t)
             self.stop()
         pass
